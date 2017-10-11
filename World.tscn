@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://left-pallete.png" type="Texture" id=1]
-[ext_resource path="res://right-pallete.png" type="Texture" id=2]
-[ext_resource path="res://ball.png" type="Texture" id=3]
-[ext_resource path="res://separator.png" type="Texture" id=4]
+[ext_resource path="res://left.gd" type="Script" id=2]
+[ext_resource path="res://right-pallete.png" type="Texture" id=3]
+[ext_resource path="res://right.gd" type="Script" id=4]
+[ext_resource path="res://ball.png" type="Texture" id=5]
+[ext_resource path="res://separator.png" type="Texture" id=6]
 
 [node name="World" type="Node2D"]
 
@@ -12,27 +14,29 @@
 position = Vector2( 154.161, 297.31 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="rightPlayer" type="Sprite" parent="."]
 
 position = Vector2( 865.238, 298.981 )
 scale = Vector2( 3, 3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="ball" type="Sprite" parent="."]
 
 position = Vector2( 534.893, 287.969 )
 scale = Vector2( 3, 3 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="separator" type="Sprite" parent="."]
 
-position = Vector2( 534.893, 287.969 )
-scale = Vector2( 3, 1 )
-texture = ExtResource( 4 )
+position = Vector2( 534.134, 298.929 )
+scale = Vector2( 3.75861, 1.47279 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 
